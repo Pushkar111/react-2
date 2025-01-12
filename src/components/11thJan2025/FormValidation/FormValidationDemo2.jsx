@@ -6,7 +6,11 @@ export const FormValidationDemo2 = () => {
         register,
         handleSubmit,
         formState: { errors },
-    } = useForm();
+    } = useForm(
+        {
+            mode: "all",
+        }
+    );
 
     console.log(errors);
 
@@ -49,6 +53,22 @@ export const FormValidationDemo2 = () => {
                 value: 20,
                 message: "Password must be less than 20 characters",
             },
+        }, 
+
+        contact: {
+            required: "Contact is required",
+            pattern: {
+                value: /[6-9]{1}[0-9]{9}/,
+                // value: /^\+91[6-9]{1}[0-9]{9}$/,
+                message: "Invalid Contact",
+            }
+        }, 
+
+        refcode: {
+            required: "Referral Code is required",
+            validate: (fieldValue) => {
+                return fieldValue === "Royal" || fieldValue === "Jagrut Awaaz" || "Invalid Referral Code";
+            }
         }
     };
 
@@ -97,6 +117,21 @@ export const FormValidationDemo2 = () => {
                     {/* {errors.age && <span className="mt-2 text-sm text-red-600">{errors.age.message}</span>} */}
                 </div>
 
+                {/* Contact */}
+                <div>
+                    <label htmlFor="contact" className="block text-sm font-medium text-gray-700">Contact</label>
+                    <input type="number" placeholder="Enter Contact" {...register("contact", validationSchema.contact)} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    {<span className="mt-2 text-sm text-red-600">{errors.contact?.message}</span>}
+                    {/* {errors.contact && <span className="mt-2 text-sm text-red-600">{errors.contact.message}</span>} */}
+                </div>
+                
+                {/* Reference Code */}
+                <div>
+                    <label htmlFor="refcode" className="block text-sm font-medium text-gray-700">Reference Code</label>
+                    <input type="text" placeholder="Enter Reference Code" {...register("refcode", validationSchema.refcode)} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
+                    {<span className="mt-2 text-sm text-red-600">{errors.refcode?.message}</span>}
+                    {/* {errors.refcode && <span className="mt-2 text-sm text-red-600">{errors.refcode.message}</span>} */}
+                </div>
                 
                 {/* Submit */}
                 <input type="submit" value="Submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"/>

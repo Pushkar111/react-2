@@ -19,11 +19,18 @@ export const Tasks = () => {
                 <li className="mb-4">
                     <Link to="/formtask2" className="text-blue-500 hover:underline">2. create form MCQ paper handler</Link>
                 </li>
+                
+                {/* 11th January */}
                 <li className="mb-4">
                     <Link to="/formvalidationdemo1" className="text-blue-500 hover:underline">3. 11thJan2025 FormValidationDemo1</Link>
                 </li>
                 <li className="mb-4">
                     <Link to="/formvalidationdemo2" className="text-blue-500 hover:underline">4. 11thJan2025 FormValidationDemo2</Link>
+                </li>
+
+                {/* 12th January */}
+                <li className="mb-4">
+                    <Link to="/inputdemo1" className="text-blue-500 hover:underline">5. 12thJan2025 InputDemo1</Link>
                 </li>
             </ul>
         </div>

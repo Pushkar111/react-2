@@ -21,6 +21,7 @@ import { Tasks } from "./components/05thJan2025/Forms/Tasks/Tasks";
 import { FormValidationDemo1 } from "./components/11thJan2025/FormValidation/FormValidationDemo1";
 import { FormValidationDemo2 } from "./components/11thJan2025/FormValidation/FormValidationDemo2";
 import { YoutubeForm } from "./components/11thJan2025/FormValidation/Tasks/YoutubeForm";
+import { InputDemo1 } from "./components/11thJan2025/FormValidation/InputDemo1";
 
 function App() {
     // return (
@@ -68,6 +69,9 @@ function App() {
                 {/* 11th January Form Validation  */}
                 <Route path="/formvalidationdemo1" element={<FormValidationDemo1/>}></Route>
                 <Route path="/formvalidationdemo2" element={<FormValidationDemo2/>}></Route>
+
+                {/* 12th January Input Demo without using useForm [for 1 or 2 inputs] */}
+                <Route path="/inputdemo1" element={<InputDemo1/>}></Route>
             </Routes>
 
             {/* <YoutubeForm></YoutubeForm> */}
