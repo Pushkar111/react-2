@@ -1,0 +1,42 @@
+.page-not-found {
+    background-image: url('../images/error404.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    text-align: center;
+    font-family: 'Algerian', sans-serif;
+    color: black;
+}
+
+.image-container {
+    height: 42vh;
+    padding-top: 100px;
+}
+button {
+    width: 210px;
+    color: black;
+    padding: 20px 45px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    font-family: 'revert-layer', sans-serif;
+    font-size: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 90px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    transition: ease-in-out 0.3s;
+    transform: scale(1);
+    background-color: #e50914; /* Netflix red color */
+    color: white;
+}

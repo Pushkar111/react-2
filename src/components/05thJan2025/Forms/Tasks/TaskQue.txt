@@ -1,0 +1,12 @@
+05/01/2025
+TASK:
+
+	1. Create form for student Application: min 7 fields should include radio button and checkbox
+
+	2. create form MCQ paper handler : 
+
+        enter question name : enter Option correct answer:
+        submit: display question
+        
+	    hint: take array as useState and push data.
+	
