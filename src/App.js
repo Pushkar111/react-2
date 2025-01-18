@@ -20,8 +20,9 @@ import { PrintQuestionsTableTask2 } from "./components/05thJan2025/Forms/Tasks/P
 import { Tasks } from "./components/05thJan2025/Forms/Tasks/Tasks";
 import { FormValidationDemo1 } from "./components/11thJan2025/FormValidation/FormValidationDemo1";
 import { FormValidationDemo2 } from "./components/11thJan2025/FormValidation/FormValidationDemo2";
-import { YoutubeForm } from "./components/11thJan2025/FormValidation/Tasks/YoutubeForm";
 import { InputDemo1 } from "./components/11thJan2025/FormValidation/InputDemo1";
+import { UserHobbiesForm } from "./components/11thJan2025/FormValidation/Tasks/UserHobbiesForm";
+import { PasswordValidationForm } from "./components/11thJan2025/FormValidation/Tasks/PasswordValidationForm";
 
 function App() {
     // return (
@@ -70,8 +71,11 @@ function App() {
                 <Route path="/formvalidationdemo1" element={<FormValidationDemo1/>}></Route>
                 <Route path="/formvalidationdemo2" element={<FormValidationDemo2/>}></Route>
 
-                {/* 12th January Input Demo without using useForm [for 1 or 2 inputs] */}
+                {/* 12th January Input Demo without using useForm [for 1 or 2 inputs] and 12th January Tasks */}
                 <Route path="/inputdemo1" element={<InputDemo1/>}></Route>
+                <Route path="/userhobbiesform" element={<UserHobbiesForm/>}></Route>
+                <Route path="/passwordvalidationform" element={<PasswordValidationForm/>}></Route>
+                
             </Routes>
 
             {/* <YoutubeForm></YoutubeForm> */}

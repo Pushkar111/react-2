@@ -32,6 +32,12 @@ export const Tasks = () => {
                 <li className="mb-4">
                     <Link to="/inputdemo1" className="text-blue-500 hover:underline">5. 12thJan2025 InputDemo1</Link>
                 </li>
+                <li className="mb-4">
+                    <Link to="/userhobbiesform" className="text-blue-500 hover:underline">6. 12thJan2025 UserHobbiesForm</Link>
+                </li>
+                <li className="mb-4">
+                    <Link to="/passwordvalidationform" className="text-blue-500 hover:underline">7. 12thJan2025 PasswordValidationForm</Link>
+                </li>
             </ul>
         </div>
     );
