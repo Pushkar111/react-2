@@ -1,0 +1,36 @@
+12th January Tasks 
+------------------
+
+1) regex revsion:
+=> https://regex-pro.netlify.app/
+=> https://regex101.com/
+=> https://regexr.com/
+=> https://regex.netlify.app/
+
+2) dependent dropdown city and country dynamic
+=> Solution in InputDemo1.jsx
+
+3) 4 hobbies user has to select min 3
+=> Solution in UserHobbiesForm.jsx
+
+4) onchange --> regex : passpwrd handler....
+    4 to 5 ways of validate
+
+input password:
+required 1 special char
+1 upper case
+1 lower case
+1 number
+
+<p> upper case </p> :green
+<p> lower case </p>
+<p> number </p>
+<p> special char </p>
+<p> length </p>
+
+<submit> display
+    green and red colour according valiadation
+
+=> Solution in PasswordValidationForm.jsx
+
+    
