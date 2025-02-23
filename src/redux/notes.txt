@@ -1,0 +1,48 @@
+Problem :- I need to transfer or pass gState in F Component or D or E Component so i have to put it that gState in A Component 
+------- :- So this is known as props drilling 
+        :- to overcome this Problem The Redux will use
+
+
+
+                                        A
+                                        |
+                    -----------------------------------------
+                    |                                       |
+                    B                                       C
+                    |                                       |
+        -------------------------               -------------------------
+        |                       |               |                       |
+        D                       E               F                       G (gState{...})
+
+
+
+Solution :- Redux ---> State Management Library
+--------
+
+
+Redux Terminologies :- 
+-------------------
+
+    1) Redux Store :- use context api in backend
+        -> Contains 3 Parts 
+            1. Application State
+                    state : {
+                        gState: {...},
+                        fState: {...},
+                        eState: {...},
+                        dState: {...},
+                    }
+
+
+            2. State Update Logic
+                    function reducer(){}
+
+            3. Method to notify State Change
+                    subscribe()
+                    
+
+Q. What Redux Will do ? 
+-> Redux will manage the state centrally in a store, 
+-> allowing any component to access the state directly without the need for props drilling. 
+-> This is achieved by connecting components to the Redux store using the `connect` function or the `useSelector` and `useDispatch` hooks in functional components.
+-> This way, components can read from and dispatch actions to the store, ensuring a single source of truth for the application state.
