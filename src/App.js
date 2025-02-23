@@ -1,5 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
+import { ProductComponent } from "./components/22thFeb2025/ProductComponent";
+import { Route, Routes } from "react-router-dom";
+import { Login } from "./components/16thFeb2025/Login";
+import { PrivateRoute } from "./components/16thFeb2025/PrivateRoute";
+import { Dashboard } from "./components/16thFeb2025/Dashboard";
+import { NavbarCustomHook } from "./components/16thFeb2025/NavbarCustomHook";
+import { AuthProvider } from "./components/16thFeb2025/AuthContext";
+import { BankComponent } from "./components/23thFeb2025/BankComponent";
+import { BalanceComponent } from "./components/23thFeb2025/BalanceComponent";
 
 // import { NetflixNavbar } from "./components/21thDec2024/Netflix/NetflixNavbar";
 // import { Route, Routes } from "react-router-dom";
@@ -11,7 +20,6 @@ import "./App.css";
 // import { NetflixContact } from "./components/21thDec2024/Netflix/NetflixContact";
 // import { PlayMovies } from "./components/21thDec2024/Netflix/PlayMovies";
 // import { FormDemo1 } from "./components/05thJan2025/Forms/FormDemo1";
-
 
 // import { FormTask1 } from "./components/05thJan2025/Forms/Tasks/FormTask1";
 // import { FormTask2 } from "./components/05thJan2025/Forms/Tasks/FormTask2";
@@ -25,12 +33,9 @@ import "./App.css";
 // import { UserHobbiesForm } from "./components/11thJan2025/FormValidation/Tasks/UserHobbiesForm";
 // import { PasswordValidationForm } from "./components/11thJan2025/FormValidation/Tasks/PasswordValidationForm";
 
-
-
 // import { MoviesNavbar } from "./components/18thJan2025/api/OMDB_Movie_Search_App/MoviesNavbar";
 // import { MoviesHome } from "./components/18thJan2025/api/OMDB_Movie_Search_App/MoviesHome";
 // import { MovieDetail } from "./components/18thJan2025/api/OMDB_Movie_Search_App/MovieDetail";
-
 
 // import { Route, Routes } from "react-router-dom";
 // import { ApiDemo1 } from "./components/18thJan2025/api/ApiDemo1";
@@ -41,15 +46,11 @@ import "./App.css";
 // import { UseMemoDemo1 } from "./components/1stFeb2025/useMemo/UseMemoDemo1";
 // import { UseEffectDemo } from "./components/1stFeb2025/useEffect/UseEffectDemo";
 
-
 // import { ProductNavbar } from "./components/08thFeb2025/context/ProductNavbar";
 // import { Products } from "./components/08thFeb2025/context/Products";
 // import { ListProducts } from "./components/08thFeb2025/context/ListProducts";
 
-
 // import { FindBombGame } from "./components/15thFeb2025/FindBombGame";
-
-
 
 function App() {
     // return (
@@ -117,7 +118,6 @@ function App() {
     //     </div>
     // );
 
-
     // API 25th January 2025
     // return (
     //     <div className="App">
@@ -127,7 +127,7 @@ function App() {
     //             <Route path="/allUsers" element={<ApiDemo1 />}></Route>
     //             <Route path="/addUsers" element={<ApiDemo2 />}></Route>
     //             <Route path="/allUsers/editUser/:id" element={<EditUser />}></Route>
-            
+
     //             {/* 1st feb UseMemo and UseEffect Real Time Example */}
     //             <Route path="/useMemoDemo1" element={<UseMemoDemo1/>}></Route>
     //             <Route path="/useMemoFilterLargeList" element={<FilteringLargeList/>}></Route>
@@ -135,7 +135,6 @@ function App() {
     //         </Routes>
     //     </div>
     // );
-
 
     // 8th February 2025 Context API
     // return (
@@ -156,10 +155,45 @@ function App() {
     //     </div>
     // );
 
-    // 16th February 2025 [Memory Game] 
+    // 16th February 2025 [Memory Game]
+    // return (
+    //     <div className="App">
+    //         {/* Samir sir/mern/react/projects/memory-game */}
+    //     </div>
+    // );
+
+    // 16th February 2025 [Custom Hooks --- Example --> [Login.jsx, Dashboard.jsx, PrivateRoute.jsx, useAuthentication.jsx]]
+    // return (
+    //     <AuthProvider>
+    //         <div className="App">
+    //             <Routes>
+    //                 <Route path="/login" element={<Login />}></Route>
+    //                 <Route
+    //                     path="/dashboard"
+    //                     element={
+    //                         <PrivateRoute>
+    //                             <Dashboard />
+    //                         </PrivateRoute>
+    //                     }></Route>
+    //             </Routes>
+    //         </div>
+    //     </AuthProvider>
+    // );
+
+    // ================================= REDUX =================================
+
+    // 22th February 2025 [Redux Toolkit ---> Cart Example --> ProductComponent.jsx --> Store --> CartSlice.js]
+    // return (
+    //     <div className="App">
+    //         <ProductComponent/>
+    //     </div>
+    // );
+
+    // 23th February 2025 [Redux Toolkit ---> Bank Example --> BankComponent.jsx --> Store --> BankSlice.js]
     return (
         <div className="App">
-            {/* Samir sir/mern/react/projects/memory-game */}
+            <BankComponent/>
+            <BalanceComponent/>
         </div>
     );
 }
